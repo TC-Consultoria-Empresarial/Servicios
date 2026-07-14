@@ -28,6 +28,8 @@
       --accent-cream: #FAF3E0;   /* Crema suave */
       --text-charcoal: #3B3B3B;  /* Gris oscuro */
       --text-white: #FFFFFF;     /* Blanco */
+      --text-dorado: #C8A24C; /*DORADO*/
+
       --border-light: rgba(250, 243, 224, 0.2);
     }
 
@@ -141,8 +143,8 @@
     }
     .btn-learn-more {
       display: inline-block;
-      background-color: var(--accent-cream);
-      color: var(--text-charcoal);
+      background-color: var(--text-dorado);
+      color: var(--text-white);
       text-decoration: none;
       padding: 12px 28px;
       font-size: 13px;
@@ -168,7 +170,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--text-white);
+      color: var(--text-dorado);
       margin-bottom: 50px;
       border-bottom: 1px solid var(--border-light);
       padding-bottom: 15px;
@@ -261,6 +263,76 @@
     }
     .footer-links a:hover { color: var(--accent-cream); }
     .footer-links i { margin-right: 5px; }
+/* =======================================================
+       📱 ADAPTACIÓN PARA MÓVILES (RESPONSIVE DESIGN)
+       ======================================================= */
+    @media (max-width: 850px) {
+      
+      /* 1. Navegación Superior y Principal */
+      .top-nav a {
+        margin: 0 8px;
+        font-size: 11px;
+      }
+      .main-nav {
+        display: block; /* Rompe la estructura de tabla */
+        padding: 20px;
+        text-align: center;
+      }
+      .nav-logo, .nav-menu {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .nav-menu {
+        margin-top: 15px;
+      }
+      .nav-menu a {
+        margin: 0 10px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      /* 2. Hero Banner (Portada) más compacta */
+      .hero-section {
+        padding: 80px 20px;
+        text-align: center;
+      }
+      .hero-content h1 {
+        font-size: 32px; /* Letra más pequeña para que no se desborde */
+      }
+
+      /* 3. Espaciado general de las secciones */
+      .section-wrapper {
+        padding: 50px 20px;
+      }
+
+      /* 4. Apilar las 3 columnas de Servicios */
+      .services-container, .service-column {
+        display: block; /* Rompe la tabla */
+        width: 100%;
+      }
+      .service-column {
+        margin-bottom: 40px;
+        padding: 0;
+      }
+
+      /* 5. Apilar la sección de Contacto e Imagen */
+      /* Nota: Usamos !important para anular los estilos "inline" (style="") que pusimos en el HTML */
+      .contact-container {
+        flex-direction: column !important; /* Pone la imagen debajo del texto */
+        gap: 30px !important;
+      }
+      .contact-info-left, .contact-image-right {
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+      .info-details {
+        text-align: center !important; /* Centramos el texto para que se vea simétrico en celular */
+      }
+      .footer-section {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -370,3 +442,4 @@
 
 </body>
 </html>
+
